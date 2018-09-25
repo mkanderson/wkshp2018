@@ -154,7 +154,7 @@ mail ist die Gruppe
 
 ### Mögliche Werte
 
-| Tables                         |     Numerisch      |  Symbolisch  |
+| Werte                          |     Numerisch      |  Symbolisch  |
 | ------------------------------ |:------------------:| ------------:|
 |Lesen, schreiben und ausführen  |         7          |       rwx    |
 |Lesen und Schreiben             |         6          |       rw-    |
