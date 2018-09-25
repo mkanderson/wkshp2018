@@ -146,11 +146,11 @@ mv [Optionen] Quelle Ziel
 ```ls -la /var/mail/
 drwxrwsr-x 2 root mail 4,0K Apr 23  2012 /var/mail/```
 
-..* Der erste Buchstabe kennzeichnet den Dateityp. Danach folgen die Zugriffsrechte.
+1. Der erste Buchstabe kennzeichnet den Dateityp. Danach folgen die Zugriffsrechte.
 
-..* root ist Eigentümer der Datei
+2. root ist Eigentümer der Datei
 
-..* mail ist die Gruppe
+3. mail ist die Gruppe
 
 ### Mögliche Werte
 
@@ -212,30 +212,24 @@ drwxrwsr-x 2 root mail 4,0K Apr 23  2012 /var/mail/```
 df [Optionen] [Verzeichnis]
 
     -h          Zeigt die Anzahl der belegten Blöcke in menschenlesbarer Form in Giga-, Mega- oder Kilobyte an.
-    
     -T          Gibt den Dateisystemtyp an (z. B. ext2 oder nfs
 
 du [Optionen] [Pfad]
 
      -a         Gibt die Größe jeder einzelnen Datei an.
-     
      -h         Zeigt die Ausgabe in menschenlesbarer Form an.
-     
      -s         Zeigt nur die errechnete Gesamtgröße an.
      
 free [Optionen]
 
     -b          Gibt die Werte in Byte an.
-    
     -k          Gibt die Werte in Kilobyte an.
-    
     -m          Gibt die Werte in Megabyte an.
 
 mount [Optionen] [Laufwerk] Mountpunkt 
 
-  -r             Mountet das Laufwerk mit Schreibschutz.
-  
-  -t Dateisystem Gibt das Dateisystem an. Die gebräuchlichsten sind ext2 für Linux-Festplatten, msdos für MS-DOS-Medien, vfat für das Windows-Dateisystem und iso9660 für CDs.
+    -r             Mountet das Laufwerk mit Schreibschutz.
+    -t Dateisystem Gibt das Dateisystem an. Die gebräuchlichsten sind ext2 für Linux-Festplatten, msdos für MS-DOS-Medien, vfat für das Windows-Dateisystem und iso9660 für CDs.
   
 ---
 
@@ -273,7 +267,7 @@ mount [Optionen] [Laufwerk] Mountpunkt
 
 ### SSH / Tunneling
 
-..* SSH steht für Secure Shell und meint ein Protokoll und dazugehörige Programme, um sich über das Netzwerk auf einem Sicheren Kanal auf der Konsole eines anderen Rechners zu verbinden. Mit SSH können außerdem Sichere Tunnel für andere Protokolle erstellt werden.
+SSH steht für Secure Shell und meint ein Protokoll und dazugehörige Programme, um sich über das Netzwerk auf einem Sicheren Kanal auf der Konsole eines anderen Rechners zu verbinden. Mit SSH können außerdem Sichere Tunnel für andere Protokolle erstellt werden.
 
 #### Beispiel
 
@@ -293,7 +287,7 @@ mount [Optionen] [Laufwerk] Mountpunkt
 
 ### wget
 
-..* Wget ist ein freies Kommandozeilenprogramm des GNU-Projekts zum Herunterladen von Dateien aus dem Internet.
+Wget ist ein freies Kommandozeilenprogramm des GNU-Projekts zum Herunterladen von Dateien aus dem Internet.
 
 ### Beispiel
 
