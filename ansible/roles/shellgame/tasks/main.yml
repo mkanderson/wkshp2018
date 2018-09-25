@@ -1,0 +1,13 @@
+---
+
+- name: debug
+  debug: msg="{{ item.username }}"
+  with_items:
+    - "{{ shellgame_users }}"
+
+- name: Create users
+  user: 
+    name="{{ item.username }}"
+    createhome=yes
+  with_items:
+    - "{{ shellgame_users }}"

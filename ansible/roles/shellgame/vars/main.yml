@@ -1,0 +1,7 @@
+---
+
+shellgame_users:
+  - {
+      username: "shellgame0",
+      password: "{{ 'shellgame0'  | password_hash('sha512') }}"
+      }
