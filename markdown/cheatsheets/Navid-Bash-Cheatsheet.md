@@ -39,8 +39,11 @@
 `halt`          Um keinen Datenverlust zu riskieren, sollten Sie Ihr System immer mit diesem Programm herunterfahren. 
 
 `reboot`        Fährt das System wie mit dem Befehl halt herunter, startet es aber unmittelbar danach wieder.
+
 ---
+
 ### Befehl Syntax und Häufig verwendete Optionen von Grundkommandos
+
 ls [Optionen] [Dateien] 
     -l          Zeigt eine detaillierte Liste an.
     -a          Zeigt versteckte Dateien an.
