@@ -276,23 +276,24 @@ mount [Optionen] [Laufwerk] Mountpunkt
 SSH steht für Secure Shell und meint ein Protokoll und dazugehörige Programme, um sich über das Netzwerk auf einem Sicheren Kanal auf der Konsole eines anderen Rechners zu verbinden. Mit SSH können außerdem Sichere Tunnel für andere Protokolle erstellt werden.
 
 #### Beispiel
-`ssh hostname                                        verbindet zur Konsole des Rechners hostname (alternativ kann auch die IP-Adresse angegeben werden)
 
-ssh user@hostname                                   verbindet sich als Benutzer user
+`ssh hostname`                                        verbindet zur Konsole des Rechners hostname (alternativ kann auch die IP-Adresse angegeben werden)
+
+`ssh user@hostname`                                   verbindet sich als Benutzer user
             
-ssh -L 90:localhost:80 hostname                     leitet Port 80 von Rechner hostname auf den lokalen Port 90′weiter. In diesem Beispiel wird der Webserver (Port 80) von hostname lokal über Port 90 erreichbar (http://localhost:90).Alle Daten werden dabei verschlüsselt übertragen
+`ssh -L 90:localhost:80 hostname`                     leitet Port 80 von Rechner hostname auf den lokalen Port 90′weiter. In diesem Beispiel wird der Webserver (Port 80) von hostname lokal über Port 90 erreichbar (http://localhost:90).Alle Daten werden dabei verschlüsselt übertragen
 
-ssh -R 5901:localhost:5900 hostname                 Leitet den Lokalen Port 5900 (VNC) über einen sicheren SSH-Kanal auf den Rechner hostname weiter. hostname kann jetzt eine verschlüsselte VNC-Verbindung auf den lokalen Rechner über seinen Port 5901 herstellen. Dies ist auch sinnvoll, wenn Port 5900 durch eine Firewall gesperrt wird, der Datenverkehr läuft bei einem Tunnel immer über den SSH-Port 22!
+`ssh -R 5901:localhost:5900 hostname                  Leitet den Lokalen Port 5900 (VNC) über einen sicheren SSH-Kanal auf den Rechner hostname weiter. hostname kann jetzt eine verschlüsselte VNC-Verbindung auf den lokalen Rechner über seinen Port 5901 herstellen. Dies ist auch sinnvoll, wenn Port 5900 durch eine Firewall gesperrt wird, der Datenverkehr läuft bei einem Tunnel immer über den SSH-Port 22!
 
-scp lokal.txt benutzer@hostname:/home/kopie.txt     Kopiert die lokale Datei lokal.txt auf den entfernten Rechnerhostname in das Verzeichnis /home/ unter dem Namen kopie.txt.
+`scp lokal.txt benutzer@hostname:/home/kopie.txt`     Kopiert die lokale Datei lokal.txt auf den entfernten Rechnerhostname in das Verzeichnis /home/ unter dem Namen kopie.txt.
 
-scp benutzer@hostname:/home/kopie.txt .             Kopiert die entfernte Datei /home/kopie.txt von hostname auf den Lokalen Rechner ins aktuelle Verzeichnis`
+`scp benutzer@hostname:/home/kopie.txt`               Kopiert die entfernte Datei /home/kopie.txt von hostname auf den Lokalen Rechner ins aktuelle Verzeichnis
 
 ---
 
 ### wget
 
-*Wget ist ein freies Kommandozeilenprogramm des GNU-Projekts zum Herunterladen von Dateien aus dem Internet.
+Wget ist ein freies Kommandozeilenprogramm des GNU-Projekts zum Herunterladen von Dateien aus dem Internet.
 
 ### Beispiel
 
