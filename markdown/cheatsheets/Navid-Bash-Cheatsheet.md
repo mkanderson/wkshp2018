@@ -141,7 +141,7 @@ mv [Optionen] Quelle Ziel
 
 `chgrp`       Ändern der Gruppenzugehörigkeit von Dateien oder Verzeichnissen
 
-#### Beispie
+#### Beispiel
 
 ```ls -la /var/mail/
 drwxrwsr-x 2 root mail 4,0K Apr 23  2012 /var/mail/```
@@ -155,11 +155,11 @@ mail ist die Gruppe
 ### Mögliche Werte
                                     Numerisch   Symbolisch
                                     
-Lesen, schreiben und ausführen          7 	 	   rwx
+Lesen, schreiben und ausführen          7           rwx
 
-Lesen und Schreiben                 	6 	 	   rw-
-
-Lesen und Ausführen                  	5 	 	   r-x 
+Lesen und Schreiben                         	6 	 	   rw-
+    
+Lesen und Ausführen                         	5 	 	   r-x 
 
 Nur lesen 	                            4    	   r-- 
 
