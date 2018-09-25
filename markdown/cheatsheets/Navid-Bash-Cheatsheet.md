@@ -175,76 +175,104 @@ Keine Rechte 	                        0 	 	   ---
 
 ## Datei Management
 
-cat datei.txt           Inhalt von datei.txt direkt ausgeben
+`cat datei.txt`           Inhalt von datei.txt direkt ausgeben
 
-more datei.txt          Datei Seitenweise ausgeben, Navigieren mit Pfeiltasten, Leertaste für nächste Seite.
+`more datei.txt`          Datei Seitenweise ausgeben, Navigieren mit Pfeiltasten, Leertaste für nächste Seite.
 
-less datei.txt          wie more, jedoch mehr Funktionen (siehe manpage: man less). q zum beenden
+`less datei.txt`          wie more, jedoch mehr Funktionen (siehe manpage: man less). q zum beenden
 
-lspci | less            Ausgabe von lspci an less weiterleiten
+`lspci | less`            Ausgabe von lspci an less weiterleiten
 
-tail datei.txt          Die letzten Zeilen von datei.txt ausgeben
+`tail datei.txt`          Die letzten Zeilen von datei.txt ausgeben
 
-tail -f datei.txt       Die letzten Zeilen von datei.txt ausgeben und auf Änderungen warten. Wird der Datei etwas hinzugefügt, wird es direkt ausgegeben. Beenden mit STRG + C. Nützlich vor allem für Logdateien
+`tail -f datei.txt`       Die letzten Zeilen von datei.txt ausgeben und auf Änderungen warten. Wird der Datei etwas hinzugefügt, wird es direkt ausgegeben. Beenden mit STRG + C. Nützlich vor allem für Logdateien
 
-nano datei.txt          öffnet datei.txt in nano, ein einfaches Textbearbeitungsprogramm. Zum beenden STRG+X
+`nano datei.txt`          öffnet datei.txt in nano, ein einfaches Textbearbeitungsprogramm. Zum beenden STRG+X
 
-vi oder vim datei.txt   öffnet datei.txt in vi, ein sehr umfangreiches Textbearbeitungsprogramm. Zum Beenden ESC q! ENTER. Unbedingt manpage vor dem benutzen lesen!
+`vi oder vim datei.txt`   öffnet datei.txt in vi, ein sehr umfangreiches Textbearbeitungsprogramm. Zum Beenden ESC q! ENTER. Unbedingt manpage vor dem benutzen lesen!
 
-sort datei.txt          gibt datei.txt sortiert aus
+`sort datei.txt`          gibt datei.txt sortiert aus
 
-rename                  Umbenennung von Dateien 
+`rename`                  Umbenennung von Dateien 
 
-cut                     Spaltenweise Manipulation von Textdaten 
+`cut`                     Spaltenweise Manipulation von Textdaten 
+
 ---
-### Disk Managment
-df          Ausgabe des Speicherplatzes aller eingehängten Laufwerke ("disk free") 
-du          Ausgabe des Speicherverbrauchs von Verzeichnissen ("disk usage") 
-free        Dieser Befehl zeigt den gesamten und den belegten Arbeits- und Swap-Speicher an 
-fdisk       fdisk legt MBR-Partititonen an, löscht, manipuliert oder listet sie
-mount       Mit diesem Befehl können Sie jeden Datenträger wie Festplatten, CD-ROM-Laufwerke und andere Laufwerke in ein Verzeichnis des Linux-Dateisystems einbinden
-umount      Mit diesem Befehl hängen Sie ein gemountetes Laufwerk aus dem Dateisystem aus. Dies bezeichnet man auch als „Unmounten“
-#### Beispiel
+
+## Disk Managment
+
+`df`          Ausgabe des Speicherplatzes aller eingehängten Laufwerke ("disk free") 
+
+`du`          Ausgabe des Speicherverbrauchs von Verzeichnissen ("disk usage") 
+
+`free`        Dieser Befehl zeigt den gesamten und den belegten Arbeits- und Swap-Speicher an
+
+`fdisk`       fdisk legt MBR-Partititonen an, löscht, manipuliert oder listet sie
+
+`mount`       Mit diesem Befehl können Sie jeden Datenträger wie Festplatten, CD-ROM-Laufwerke und andere Laufwerke in ein Verzeichnis des Linux-Dateisystems einbinden
+
+`umoun`t      Mit diesem Befehl hängen Sie ein gemountetes Laufwerk aus dem Dateisystem aus. Dies bezeichnet man auch als „Unmounten“
+
+### Beispiel
+
 df [Optionen] [Verzeichnis]
+
     -h          Zeigt die Anzahl der belegten Blöcke in menschenlesbarer Form in Giga-, Mega- oder Kilobyte an.
     -T          Gibt den Dateisystemtyp an (z. B. ext2 oder nfs
 
 du [Optionen] [Pfad]
+
      -a         Gibt die Größe jeder einzelnen Datei an.
      -h         Zeigt die Ausgabe in menschenlesbarer Form an.
      -s         Zeigt nur die errechnete Gesamtgröße an.
-free [Optionen] 
+     
+free [Optionen]
+
     -b          Gibt die Werte in Byte an.
     -k          Gibt die Werte in Kilobyte an.
     -m          Gibt die Werte in Megabyte an.
 
 mount [Optionen] [Laufwerk] Mountpunkt 
+
   -r             Mountet das Laufwerk mit Schreibschutz.
   -t Dateisystem Gibt das Dateisystem an. Die gebräuchlichsten sind ext2 für Linux-Festplatten, msdos für MS-DOS-Medien, vfat für das Windows-Dateisystem und iso9660 für CDs.
+  
 ---
-### Archivierung / ZIP
-tar cf archiv.tar ordner/       ordner im aktuellen Verzeichnis in die Datei archiv.tar packen
 
-tar xf archiv.tar               archiv.tar entpacken
+## Archivierung / ZIP
+`tar cf archiv.tar ordner/`       ordner im aktuellen Verzeichnis in die Datei archiv.tar packen
 
-tar cfz a.tar.gz o/             Archiv a.tar.gz aus Ordner o/ mit gzip komprimieren
+`tar xf archiv.tar`               archiv.tar entpacken
 
-tar cfj a.tar.bz o/             Archiv a.tar.bz aus Ordner o/ mit bzip komprimieren
+`tar cfz a.tar.gz o/`             Archiv a.tar.gz aus Ordner o/ mit gzip komprimieren
 
-zip archiv.zip *                Alle Dateien & Ordner im aktuellen Verzeichnis in archiv.zip speichern
+`tar cfj a.tar.bz o/`             Archiv a.tar.bz aus Ordner o/ mit bzip komprimieren
 
-unzip archiv.zip                archiv.zip entpacken
+`zip archiv.zip *`                Alle Dateien & Ordner im aktuellen Verzeichnis in archiv.zip speichern
 
-gzip -d [Parameter] Datei(en)   Dieser Befehl komprimiert den Inhalt von Dateien mit komplexen mathematischen Algorithmen. Die komprimierten Dateien erhalten die Erweiterung .gz und müssen vor einer erneuten Verwendung dekomprimiert werden
+`unzip archiv.zip`                archiv.zip entpacken
+
+`gzip -d [Parameter] Datei(en)`   Dieser Befehl komprimiert den Inhalt von Dateien mit komplexen mathematischen Algorithmen. Die komprimierten Dateien erhalten die Erweiterung .gz und müssen vor einer erneuten Verwendung dekomprimiert werden
+
 ---
-### Prozesse
-top                 Dieser Befehl gibt einen schnellen Überblick über die laufenden Prozesse. Mit H öffnen Sie eine Seite mit kurzen Erläuterungen zu den wichtigsten Optionen dieses Programms.
-ps aux              Ohne Angabe von Optionen zeigt dieser Befehl eine Tabelle der von Ihnen gestarteten Programme und Prozesse an. aux Zeigt eine detaillierte Liste aller Prozesse unabhängig von ihren Eigentümern an.
-kill -9 Prozess-ID  Prozess-ID  Sendet statt des TERM-Signals ein KILL-Signal, mit dem sich nahezu jeder Prozess beenden lässt.
-killall             Dieser Befehl entspricht dem Befehl kill, akzeptiert aber statt der Prozess-ID den Prozessnamen als Argument. Der Befehl beendet alle Prozesse mit dem angegebenen Namen. 
+
+## Prozesse
+
+`top`                 Dieser Befehl gibt einen schnellen Überblick über die laufenden Prozesse. Mit H öffnen Sie eine Seite mit kurzen Erläuterungen zu den wichtigsten Optionen dieses Programms.
+
+`ps aux`              Ohne Angabe von Optionen zeigt dieser Befehl eine Tabelle der von Ihnen gestarteten Programme und Prozesse an. aux Zeigt eine detaillierte Liste aller Prozesse unabhängig von ihren Eigentümern an.
+
+
+`kill -9 Prozess-ID`  Prozess-ID  Sendet statt des TERM-Signals ein KILL-Signal, mit dem sich nahezu jeder Prozess beenden lässt.
+
+`killall`             Dieser Befehl entspricht dem Befehl kill, akzeptiert aber statt der Prozess-ID den Prozessnamen als Argument. Der Befehl beendet alle Prozesse mit dem angegebenen Namen. 
+
 ---
-### Network Utilities
-#### SSH / Tunneling
+
+## Network Utilities
+
+### SSH / Tunneling
+
 SSH steht für Secure Shell und meint ein Protokoll und dazugehörige Programme, um sich über das Netzwerk auf einem Sicheren Kanal auf der Konsole eines anderen Rechners zu verbinden. Mit SSH können außerdem Sichere Tunnel für andere Protokolle erstellt werden.
 
 #### Beispiel
@@ -260,23 +288,39 @@ scp lokal.txt benutzer@hostname:/home/kopie.txt     Kopiert die lokale Datei lok
 
 scp benutzer@hostname:/home/kopie.txt .             Kopiert die entfernte Datei /home/kopie.txt von hostname auf den Lokalen Rechner ins aktuelle Verzeichnis
 
-#### wget
+---
+
+### wget
+
 Wget ist ein freies Kommandozeilenprogramm des GNU-Projekts zum Herunterladen von Dateien aus dem Internet.
 
-#### Beispiel
-wget http://palita.net/empty.txt            Datei empty.txt von palita.net herunterladen und im aktuellen Verzeichnis abspeichern
+### Beispiel
 
-wget -c http://palita.net/empty.txt         Vorher abgebrochenen Download fortsetzen (-continue)
+`wget http://palita.net/empty.txt            Datei empty.txt von palita.net herunterladen und im aktuellen Verzeichnis abspeichern``
+
+`wget -c http://palita.net/empty.txt         Vorher abgebrochenen Download fortsetzen (-continue)
+
+---
 
 ### Bash History
-CTRL-p          Fetch the previous command from the history list.
-CTRL-n          Fetch the next command from the history list.
-CTRL-r          Search history backward (incremental search).
-CTRL-s          Search history forward (incremental search).
-Meta-p          Search backward using non-incremental search.
-Meta-n          Search forward using non-incremental search.
-Meta-<          Move to the first line in the history.
-Meta->          Move to the end of the history list.
+
+`CTRL-p`          Fetch the previous command from the history list.
+
+`CTRL-n`         Fetch the next command from the history list.
+
+`CTRL-r`          Search history backward (incremental search).
+
+`CTRL-s`          Search history forward (incremental search).
+
+`Meta-p`         Search backward using non-incremental search.
+
+`Meta-n`          Search forward using non-incremental search.
+
+`Meta-<`          Move to the first line in the history.
+
+`Meta->`          Move to the end of the history list.
+
+---
 
 
 
