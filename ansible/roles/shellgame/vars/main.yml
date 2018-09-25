@@ -5,3 +5,44 @@ shellgame_users:
       username: "shellgame0",
       password: "{{ 'shellgame0'  | password_hash('sha512') }}"
       }
+  - {
+      username: "shellgame2",
+      password: "{{ 'd5c3034dcb11b9d4'  | password_hash('sha512') }}"
+      }
+  - {
+      username: "shellgame3",
+      password: "{{ 'd5c3034dcb11b9d4'  | password_hash('sha512') }}"
+      }
+  - {
+      username: "shellgame4",
+      password: "{{ 'd5c3034dcb11b9d4'  | password_hash('sha512') }}",
+      mail: 
+          { from: "ShellyFor",
+	  to: "shellgame3@localhost",
+	  subj: "Hallo!",
+	  body: "My password is..." }
+    }
+  - {
+      username: "shellgame5",
+      password: "{{ 'd5c3034dcb11b9d4'  | password_hash('sha512') }}"
+      }
+  - {
+      username: "shellgame6",
+      password: "{{ 'd5c3034dcb11b9d4'  | password_hash('sha512') }}"
+      }
+  - {
+      username: "shellgame7",
+      password: "{{ 'd5c3034dcb11b9d4'  | password_hash('sha512') }}"
+      }
+  - {
+      username: "shellgame8",
+      password: "{{ 'd5c3034dcb11b9d4'  | password_hash('sha512') }}"
+      }
+  - {
+      username: "shellgame9",
+      password: "{{ 'd5c3034dcb11b9d4'  | password_hash('sha512') }}"
+      }
+  - {
+      username: "shellgame10",
+      password: "{{ 'd5c3034dcb11b9d4'  | password_hash('sha512') }}"
+      }

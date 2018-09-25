@@ -1,13 +1,79 @@
 ---
 
 - name: debug
-  debug: msg="{{ item.username }}"
+  debug: msg="{{ item.mail.to }}."
+  tags: debug
+  when:  item.mail is defined
   with_items:
-    - "{{ shellgame_users }}"
+   - "{{ shellgame_users }}"
+
+- name: Set default locale to de_DE.UTF-8
+  debconf:
+    name: locales
+    question: locales/default_environment_locale
+    value: de_DE.UTF-8
+    vtype: select
+
+- name: Set local mail only
+  debconf:
+    name: postfix
+    question: postfix/main_mailer_type
+    value: "Local only"
+    vtype: select
+
+- name: install mail
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - postfix
+    - bsd-mailx
+    - mutt
+
+
+- name: allow password SSH login
+  lineinfile: 
+    dest=/etc/ssh/sshd_config 
+    regexp="^PasswordAuthentication" 
+    line="PasswordAuthentication yes"
+  notify:
+    - restart_ssh
+
+- name: set perms for homedirs
+  file:
+    dest=/etc/skel 
+    owner=root
+    group=root
+    mode=u=rwX,g=rX,o= recurse=yes
 
 - name: Create users
   user: 
     name="{{ item.username }}"
+    password="{{ item.password }}"
     createhome=yes
+    shell='/bin/bash'
   with_items:
     - "{{ shellgame_users }}"
+
+- name: Populate home folders
+  copy: 
+    src: "{{ item.username }}_data/"
+    dest: "/home/{{ item.username }}/"
+    owner: "{{ item.username }}"
+    group: "{{ item.username }}"
+    mode: 0660
+    directory_mode: 0770
+  with_items:
+    - "{{ shellgame_users }}"
+  ignore_errors: yes
+
+- name: send mail
+  mail:
+    to: "{{ item.mail.to }}"
+    from: "{{ item.mail.from }}"
+    subject: "{{ item.mail.subj }}"
+    body: "{{ item.mail.body }}"
+  when:  item.mail is defined
+  with_items:
+    - "{{ shellgame_users }}"
+    
