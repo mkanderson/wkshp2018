@@ -277,7 +277,7 @@ SSH steht für Secure Shell und meint ein Protokoll und dazugehörige Programme,
             
 `ssh -L 90:localhost:80 hostname`                     leitet Port 80 von Rechner hostname auf den lokalen Port 90′weiter. In diesem Beispiel wird der Webserver (Port 80) von hostname lokal über Port 90 erreichbar (http://localhost:90).Alle Daten werden dabei verschlüsselt übertragen
 
-`ssh -R 5901:localhost:5900 hostname                  Leitet den Lokalen Port 5900 (VNC) über einen sicheren SSH-Kanal auf den Rechner hostname weiter. hostname kann jetzt eine verschlüsselte VNC-Verbindung auf den lokalen Rechner über seinen Port 5901 herstellen. Dies ist auch sinnvoll, wenn Port 5900 durch eine Firewall gesperrt wird, der Datenverkehr läuft bei einem Tunnel immer über den SSH-Port 22!
+`ssh -R 5901:localhost:5900 hostname`                 Leitet den Lokalen Port 5900 (VNC) über einen sicheren SSH-Kanal auf den Rechner hostname weiter. hostname kann jetzt eine verschlüsselte VNC-Verbindung auf den lokalen Rechner über seinen Port 5901 herstellen. Dies ist auch sinnvoll, wenn Port 5900 durch eine Firewall gesperrt wird, der Datenverkehr läuft bei einem Tunnel immer über den SSH-Port 22!
 
 `scp lokal.txt benutzer@hostname:/home/kopie.txt`     Kopiert die lokale Datei lokal.txt auf den entfernten Rechnerhostname in das Verzeichnis /home/ unter dem Namen kopie.txt.
 
@@ -285,7 +285,7 @@ SSH steht für Secure Shell und meint ein Protokoll und dazugehörige Programme,
 
 ---
 
-### wget
+## wget
 
 Wget ist ein freies Kommandozeilenprogramm des GNU-Projekts zum Herunterladen von Dateien aus dem Internet.
 
@@ -297,7 +297,7 @@ Wget ist ein freies Kommandozeilenprogramm des GNU-Projekts zum Herunterladen vo
 
 ---
 
-### Bash History
+## Bash History
 
 `CTRL-p`          Fetch the previous command from the history list.
 
