@@ -153,23 +153,17 @@ root ist Eigentümer der Datei
 mail ist die Gruppe
 
 ### Mögliche Werte
-                                    Numerisch   Symbolisch
-                                    
-Lesen, schreiben und ausführen          7           rwx
 
-Lesen und Schreiben                         	6 	 	   rw-
-    
-Lesen und Ausführen                         	5 	 	   r-x 
-
-Nur lesen 	                            4    	   r-- 
-
-Schreiben und Ausführen 	            3 	 	   -wx 
-
-Nur Schreiben                        	2 		   -w-	
-
-Nur Ausführen 	                        1 	 	   --x	
-
-Keine Rechte 	                        0 	 	   ---                                    
+| Tables                         |     Numerisch      |  Symbolisch  |
+| ------------------------------ |:------------------:| ------------:|
+|Lesen, schreiben und ausführen  |         7          |       rwx    |
+|Lesen und Schreiben             |         6          |       rw-    |
+|Lesen und Ausführen             |         5          |       r-x    |
+|Nur lesen                       |         4          |       r--    |
+|Schreiben und Ausführen         |         3          |       -wx    |
+|Nur Schreiben                   |         2          |       -w-    |
+|Nur Ausführen                   |         1          |       --x    |
+|Keine Rechte                    |         0          |       ---    |
  
 ---
 
