@@ -1,25 +1,44 @@
 ### Befehlsübersicht
 
 #### Grundkommandos
-cat     Verknüpfung von Dateien ("concatenate")
-cd 	    Wechsel des Arbeitsverzeichnisses ("change directory")
-cp 	    Kopie von Dateien oder Verzeichnissen ("copy")
-date 	Anzeige von Datum und Zeit
-echo 	Anzeige eines Textes
-exit 	Ende der Sitzung
-ln   	Link zu einer Datei oder einem Verzeichnis ("link")
-ls 	    Auflistung von Dateien ("list")
-man 	Ausgabe der Handbuchseite zu einem Befehl oder einer Anwendung ("manual")
-mkdir 	Erzeugung von Verzeichnissen ("make directory")
-mv 	    Kopieren einer Datei und Löschen der Ursprungsdatei ("move"); mv im aktuellen Verzeichnis ausgeführt: Umbenennung einer Datei
-pwd 	Anzeige des aktuellen Verzeichnisses ("print working directory")
-rm 	    Löschen von Dateien und Verzeichnisse ("remove")
-rmdir 	Löschen eines leeren Verzeichnisses ("remove directory")
-sudo 	Root-Rechte für den Benutzer ("substitute user do")
-touch 	Änderung der Zugriffs- und Änderungszeitstempel einer Datei oder eines Verzeichnisses (auch: Erstellen von Dateien)
-clear   Dieser Befehl löscht den Inhalt des sichtbaren Konsolenausschnitts. Er verfügt über keine Optionen.
-halt    Um keinen Datenverlust zu riskieren, sollten Sie Ihr System immer mit diesem Programm herunterfahren. 
-reboot  Fährt das System wie mit dem Befehl halt herunter, startet es aber unmittelbar danach wieder. 
+
+`cat`           Verknüpfung von Dateien ("concatenate")
+
+`cd`            Wechsel des Arbeitsverzeichnisses ("change directory")
+
+`cp`            Kopie von Dateien oder Verzeichnissen ("copy")
+
+`date`          Anzeige von Datum und Zeit
+
+`echo`          Anzeige eines Textes
+
+`exit`          Ende der Sitzung
+
+`ln`            Link zu einer Datei oder einem Verzeichnis ("link")
+
+`ls`            Auflistung von Dateien ("list")
+
+`man`           Ausgabe der Handbuchseite zu einem Befehl oder einer Anwendung ("manual")
+
+`mkdir`         Erzeugung von Verzeichnissen ("make directory")
+
+`mv`            Kopieren einer Datei und Löschen der Ursprungsdatei ("move"); mv im aktuellen Verzeichnis ausgeführt: Umbenennung einer Datei
+
+`pwd`           Anzeige des aktuellen Verzeichnisses ("print working directory")
+
+`rm`            Löschen von Dateien und Verzeichnisse ("remove")
+
+`rmdir`         Löschen eines leeren Verzeichnisses ("remove directory")
+
+`sudo`          Root-Rechte für den Benutzer ("substitute user do")
+
+`touch`         Änderung der Zugriffs- und Änderungszeitstempel einer Datei oder eines Verzeichnisses (auch: Erstellen von Dateien)
+
+`clear`         Dieser Befehl löscht den Inhalt des sichtbaren Konsolenausschnitts. Er verfügt über keine Optionen.
+
+`halt`          Um keinen Datenverlust zu riskieren, sollten Sie Ihr System immer mit diesem Programm herunterfahren. 
+
+`reboot`        Fährt das System wie mit dem Befehl halt herunter, startet es aber unmittelbar danach wieder.
 ---
 ### Befehl Syntax und Häufig verwendete Optionen von Grundkommandos
 ls [Optionen] [Dateien] 
