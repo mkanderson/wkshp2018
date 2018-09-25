@@ -199,7 +199,7 @@ Keine Rechte 	                        0 	 	   ---
 
 ---
 
-## Disk Managment
+## Disk Management
 
 `df`          Ausgabe des Speicherplatzes aller eingehängten Laufwerke ("disk free") 
 
@@ -276,7 +276,7 @@ mount [Optionen] [Laufwerk] Mountpunkt
 SSH steht für Secure Shell und meint ein Protokoll und dazugehörige Programme, um sich über das Netzwerk auf einem Sicheren Kanal auf der Konsole eines anderen Rechners zu verbinden. Mit SSH können außerdem Sichere Tunnel für andere Protokolle erstellt werden.
 
 #### Beispiel
-ssh hostname                                        verbindet zur Konsole des Rechners hostname (alternativ kann auch die IP-Adresse angegeben werden)
+`ssh hostname                                        verbindet zur Konsole des Rechners hostname (alternativ kann auch die IP-Adresse angegeben werden)
 
 ssh user@hostname                                   verbindet sich als Benutzer user
             
@@ -286,19 +286,19 @@ ssh -R 5901:localhost:5900 hostname                 Leitet den Lokalen Port 5900
 
 scp lokal.txt benutzer@hostname:/home/kopie.txt     Kopiert die lokale Datei lokal.txt auf den entfernten Rechnerhostname in das Verzeichnis /home/ unter dem Namen kopie.txt.
 
-scp benutzer@hostname:/home/kopie.txt .             Kopiert die entfernte Datei /home/kopie.txt von hostname auf den Lokalen Rechner ins aktuelle Verzeichnis
+scp benutzer@hostname:/home/kopie.txt .             Kopiert die entfernte Datei /home/kopie.txt von hostname auf den Lokalen Rechner ins aktuelle Verzeichnis`
 
 ---
 
 ### wget
 
-Wget ist ein freies Kommandozeilenprogramm des GNU-Projekts zum Herunterladen von Dateien aus dem Internet.
+*Wget ist ein freies Kommandozeilenprogramm des GNU-Projekts zum Herunterladen von Dateien aus dem Internet.
 
 ### Beispiel
 
 `wget http://palita.net/empty.txt            Datei empty.txt von palita.net herunterladen und im aktuellen Verzeichnis abspeichern``
 
-`wget -c http://palita.net/empty.txt         Vorher abgebrochenen Download fortsetzen (-continue)
+`wget -c http://palita.net/empty.txt         Vorher abgebrochenen Download fortsetzen (-continue)`
 
 ---
 
