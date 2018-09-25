@@ -1,6 +1,6 @@
 # Befehlsübersicht
 
-#### Grundkommandos
+### Grundkommandos
 
 `cat`           Verknüpfung von Dateien ("concatenate")
 
@@ -45,80 +45,133 @@
 ### Befehl Syntax und Häufig verwendete Optionen von Grundkommandos
 
 ls [Optionen] [Dateien] 
+
     -l          Zeigt eine detaillierte Liste an.
     -a          Zeigt versteckte Dateien an.
 
 cp [Optionen] Quelle Ziel 
+
     -i          Fragt den Benutzer, ob das Ziel überschrieben werden soll, falls es bereits vorhanden ist. 
     -r          Kopiert rekursiv (mit Unterverzeichnissen).
 
 rm [Optionen] Datei(en)
+
     -r          Löscht auch eventuell vorhandene Unterverzeichnisse.
     -i          Fordert den Benutzer vor dem Löschen jeder einzelnen Datei zur Bestätigung auf. 
 
 ln [Optionen] Quelle Ziel 
+
     -s          Erstellt eine symbolische Verknüpfung.
 
 cd [Optionen] [Verzeichnis] 
+
     /           zum Root Verzeichnis Wechseln
 
 cat [Optionen] Datei(en) 
+
     -n          Nummeriert die Ausgabe am linken Rand.
 
 mv [Optionen] Quelle Ziel 
+
     -b          Erstellt vor dem Verschieben eine Sicherungskopie der Quelle.
     -i          Fragt den Benutzer, ob das Ziel überschrieben werden soll, falls es bereits vorhanden ist.
+    
 ---
-### Navigationsbefehl
-cd /home/   zum Pfad /home/ navigieren (change directory)
-pwd         aktuelles Arbeitsverzeichnis ausgeben (print working directory)
-cd          zum Heimatverzeichnis (Standardmäßig /home/benutzername/ wechseln
-cd -        zum letzen Verzeichnis wechseln
-pushd  .    aktuellen Pfad zwischenspeichern
-popd        zum zwischengespeicherten Pfad wechseln
+
+## Navigationsbefehl
+
+`cd /home/`   zum Pfad /home/ navigieren (change directory)
+
+`pwd`         aktuelles Arbeitsverzeichnis ausgeben (print working directory)
+
+`cd`          zum Heimatverzeichnis (Standardmäßig /home/benutzername/ wechseln
+
+`cd -`        zum letzen Verzeichnis wechseln
+
+`pushd .`    aktuellen Pfad zwischenspeichern
+
+`popd`        zum zwischengespeicherten Pfad wechseln
+
 ---
-### Benutzer und Gruppen verwalten
-sudo        Einen Befehl als admin ausführen
-su          Als Admin anmelden, oder SU + Benutzername den Benutzer wechseln
-useradd     Einen Benutzer anlegen
-userdel     Einen Benutzer löschen
-usermod     Einen Benutzer ändern
-groupadd    Eine Benutzergruppe anlegen
-groupdel    Eine Benutzergruppe löschen
-groupmod    Eine Benutzergruppe ändern
-passwd      Passwort einen Benutzers ändern
-chfn        Informationen eine Users bearbeiten
-id          Anzeige der Benutzer ID und Gruppen ID (Kennung)
-last        Die letzten logins nach Datum und Uhrzeit anzeigen
-login       Benutzer (neu)anmelden
-who         Die aktuell auf dem System eingeloggten User anzeigen
-whoami      Anzeige des Benutzer mit dem gerade gearbeitet wird
-id          Ermitteln der effektiven UIDs und GIDs
-groups      Die Gruppenzugehörigkeit ermitteln 
+
+## Benutzer und Gruppen verwalten
+`sudo`        Einen Befehl als admin ausführen
+
+`su`          Als Admin anmelden, oder SU + Benutzername den Benutzer wechseln
+
+`useradd`     Einen Benutzer anlegen
+
+`userdel`     Einen Benutzer löschen
+
+`usermod`     Einen Benutzer ändern
+
+`groupadd`    Eine Benutzergruppe anlegen
+
+`groupdel`    Eine Benutzergruppe löschen
+
+`groupmod`    Eine Benutzergruppe ändern
+
+`passwd`      Passwort einen Benutzers ändern
+
+`chfn`        Informationen eine Users bearbeiten
+
+`id`          Anzeige der Benutzer ID und Gruppen ID (Kennung)
+
+`last`        Die letzten logins nach Datum und Uhrzeit anzeigen
+
+`login`       Benutzer (neu)anmelden
+
+`who`         Die aktuell auf dem System eingeloggten User anzeigen
+
+`whoami`      Anzeige des Benutzer mit dem gerade gearbeitet wird
+
+`id`          Ermitteln der effektiven UIDs und GIDs
+
+`groups`      Die Gruppenzugehörigkeit ermitteln 
+
 ---
-### Benutzer und Gruppe Rechte
-ls -la      Anzeigen von Datei- und Verzeichniseigenschaften
-chmod       Ändern der Dateizugriffsrechte
-chown       Ändern des Eigentümers und der Gruppenzugehörigkeit von Dateien und Verzeichnisse 
-chgrp       Ändern der Gruppenzugehörigkeit von Dateien oder Verzeichnissen
+
+## Benutzer und Gruppe Rechte
+
+`ls -la`      Anzeigen von Datei- und Verzeichniseigenschaften
+
+`chmod`       Ändern der Dateizugriffsrechte
+
+`chown`       Ändern des Eigentümers und der Gruppenzugehörigkeit von Dateien und Verzeichnisse 
+
+`chgrp`       Ändern der Gruppenzugehörigkeit von Dateien oder Verzeichnissen
+
 #### Beispie
+
 ls -la /var/mail/
 drwxrwsr-x 2 root mail 4,0K Apr 23  2012 /var/mail/
+
 *** Der erste Buchstabe kennzeichnet den Dateityp. Danach folgen die Zugriffsrechte.
+
 *** root ist Eigentümer der Datei
+
 *** mail ist die Gruppe
-#### Mögliche Werte
+
+### Mögliche Werte
                                     Numerisch   Symbolisch
+                                    
 Lesen, schreiben und ausführen          7 	 	   rwx 
+
 Lesen und Schreiben                 	6 	 	   rw- 
+
 Lesen und Ausführen                  	5 	 	   r-x 
+
 Nur lesen 	                            4    	   r-- 
+
 Schreiben und Ausführen 	            3 	 	   -wx 
-Nur Schreiben                        	2 		   -w-	
+
 Nur Ausführen 	                        1 	 	   --x	
+
 Keine Rechte 	                        0 	 	   --- 
+
 ---
-### Datei Management 
+
+## Datei Management 
 cat datei.txt           Inhalt von datei.txt direkt ausgeben
 
 more datei.txt          Datei Seitenweise ausgeben, Navigieren mit Pfeiltasten, Leertaste für nächste Seite.
