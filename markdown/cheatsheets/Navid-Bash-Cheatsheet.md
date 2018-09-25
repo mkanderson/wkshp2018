@@ -143,8 +143,8 @@ mv [Optionen] Quelle Ziel
 
 #### Beispie
 
-*ls -la /var/mail/
-drwxrwsr-x 2 root mail 4,0K Apr 23  2012 /var/mail/*
+```ls -la /var/mail/
+drwxrwsr-x 2 root mail 4,0K Apr 23  2012 /var/mail/```
 
 Der erste Buchstabe kennzeichnet den Dateityp. Danach folgen die Zugriffsrechte.
 
@@ -154,13 +154,21 @@ mail ist die Gruppe
 
 ### Mögliche Werte
                                     Numerisch   Symbolisch
-Lesen, schreiben und ausführen          7 	 	   rwx 
-Lesen und Schreiben                 	6 	 	   rw- 
+                                    
+Lesen, schreiben und ausführen          7 	 	   rwx
+
+Lesen und Schreiben                 	6 	 	   rw-
+
 Lesen und Ausführen                  	5 	 	   r-x 
+
 Nur lesen 	                            4    	   r-- 
+
 Schreiben und Ausführen 	            3 	 	   -wx 
+
 Nur Schreiben                        	2 		   -w-	
+
 Nur Ausführen 	                        1 	 	   --x	
+
 Keine Rechte 	                        0 	 	   ---                                    
  
 ---
