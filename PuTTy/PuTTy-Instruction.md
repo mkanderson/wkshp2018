@@ -7,7 +7,7 @@ Die folgenden Screenshots zeigen, wie ein Login auf einem Linux System per SSH e
 
 1. PuTTY starten und IP Adresse des Linux Systems eingeben: 
 
-(https://www.thomas-krenn.com/de/wiki/Datei:Putty-1.png)
+![alt text](https://www.thomas-krenn.com/de/wiki/Datei:Putty-1.png)
 
 2. Bei der ersten Verbindung muss der Key bestätigt werden: 
 
