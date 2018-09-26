@@ -17,7 +17,6 @@ Die folgenden Screenshots zeigen, wie ein Login auf einem Linux System per SSH e
 
 5. Daraufhin erscheint die Login Shell: 
 
-https://www.thomas-krenn.com/de/wiki/Datei:Putty-1.png
+[![IMAGE ALT TEXT HERE](https://www.thomas-krenn.com/de/wiki/Datei:Putty-1.png)
 
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
