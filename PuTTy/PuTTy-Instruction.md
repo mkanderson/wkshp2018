@@ -5,13 +5,13 @@ PuTTY kann von folgender Webseite bezogen werden: https://www.putty.org/
 
 ### SSH-Schlüsselpaar erzeugen mit PuTTY
 
-1.Starten Sie das PuTTY-Hilfsprogramm PuTTYgen. Es öffnet sich das Hauptfenster des PuTTY Key Generators.
+1. Starten Sie das PuTTY-Hilfsprogramm PuTTYgen. Es öffnet sich das Hauptfenster des PuTTY Key Generators.
 
 ![alt text](https://www.lancom-systems.de/docs/LCOS/referenzhandbuch/topics/pictures/puttygen_main.png)
 
-2.Wählen Sie die Art des zu erzeugenden Schlüssels (hier: SSH-2-RSA) und dessen Bit-Stärke (z. B. 4096). Klicken Sie dann auf Generate, um mit der Schlüsselerzeugung zu beginnen. 
+2. Wählen Sie die Art des zu erzeugenden Schlüssels (hier: SSH-2-RSA) und dessen Bit-Stärke (z. B. 4096). Klicken Sie dann auf Generate, um mit der Schlüsselerzeugung zu beginnen. 
 
-3.Bewegen Sie die Maus daher solange willkürlich im Programmfenster, bis der Forschrittsbalken das Ende erreicht hat. PuTTYgen generiert die für die Schlüsselerzeugung notwendigen Zufallszahlen aus den Bewegungen des Mauszeigers, die Sie innerhalb des Programmfensters vollziehen. Nach Abschluss der Erzeugung zeigt Ihnen das Programm die erzeugten Schlüsseldaten im Hauptfenster an.
+3. Bewegen Sie die Maus daher solange willkürlich im Programmfenster, bis der Forschrittsbalken das Ende erreicht hat. PuTTYgen generiert die für die Schlüsselerzeugung notwendigen Zufallszahlen aus den Bewegungen des Mauszeigers, die Sie innerhalb des Programmfensters vollziehen. Nach Abschluss der Erzeugung zeigt Ihnen das Programm die erzeugten Schlüsseldaten im Hauptfenster an.
 
 ![alt text](https://www.lancom-systems.de/docs/LCOS/referenzhandbuch/topics/pictures/puttygen_keygeneration.png)
 
