@@ -6,6 +6,7 @@ Download. PuTTY kann von folgender Webseite bezogen werden: https://www.putty.or
 Die folgenden Screenshots zeigen, wie ein Login auf einem Linux System per SSH erfolgt: 
 
 1. PuTTY starten und IP Adresse des Linux Systems eingeben: 
+
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 2. Bei der ersten Verbindung muss der Key bestätigt werden: 
