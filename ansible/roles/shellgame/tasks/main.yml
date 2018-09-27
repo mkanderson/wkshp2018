@@ -1,11 +1,19 @@
 ---
 
-- name: debug
-  debug: msg="{{ item.mail.to }}."
-  tags: debug
-  when:  item.mail is defined
+- name: install some packages
+  apt: name="{{ item }}" state=latest
   with_items:
-   - "{{ shellgame_users }}"
+    - "{{ deb_packages }}"
+
+- name: stat files
+  local_action: stat path=shellgame0_data
+  register: filetest
+  become: no
+  tags: debug
+
+- name: debug
+  debug: msg="{{filetest }}"
+  tags: debug
 
 - name: Set default locale to de_DE.UTF-8
   debconf:
@@ -30,7 +38,6 @@
     - bsd-mailx
     - mutt
 
-
 - name: allow password SSH login
   lineinfile: 
     dest=/etc/ssh/sshd_config 
@@ -45,6 +52,15 @@
     owner=root
     group=root
     mode=u=rwX,g=rX,o= recurse=yes
+
+- name: create admin user
+  user:
+    name=otto
+    password="{{ 'cli_2018!'  | password_hash('sha512') }}"
+    createhome=yes
+    shell='/bin/bash'
+    groups=sudo
+    append=yes
 
 - name: Create users
   user: 
@@ -74,6 +90,7 @@
     subject: "{{ item.mail.subj }}"
     body: "{{ item.mail.body }}"
   when:  item.mail is defined
+  tags: mail
   with_items:
     - "{{ shellgame_users }}"
     

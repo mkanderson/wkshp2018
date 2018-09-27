@@ -1,4 +1,15 @@
 ---
+deb_packages: 
+  - pandoc
+  - lynx
+  - curl
+  - wget
+  - man
+  - tree
+  - psmisc
+  - tmate
+  - tmux
+
 
 shellgame_users:
   - {
@@ -15,17 +26,19 @@ shellgame_users:
       }
   - {
       username: "shellgame4",
-      password: "{{ 'd5c3034dcb11b9d4'  | password_hash('sha512') }}",
-      mail: 
-          { from: "ShellyFor",
-	  to: "shellgame3@localhost",
-	  subj: "Hallo!",
-	  body: "My password is..." }
-    }
-  - {
-      username: "shellgame5",
       password: "{{ 'd5c3034dcb11b9d4'  | password_hash('sha512') }}"
       }
+  - {
+      username: "shellgame5",
+      password: "{{ 'd5c3034dcb11b9d4'  | password_hash('sha512') }}",
+      mail: 
+        {
+          from: "Shelly Fife",
+          to: "shellgame4@localhost",
+          subj: "Hallo!",
+          body: "Hi!\nich dachte, ich gebe Dir mein Passwort,\nfall Du irgendwas waehrend meinem Urlaub brauchst:\ntoto123\nBitte sag' den Admins nichts ;-)" 
+          }
+    }
   - {
       username: "shellgame6",
       password: "{{ 'd5c3034dcb11b9d4'  | password_hash('sha512') }}"
