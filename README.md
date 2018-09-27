@@ -1,1 +1,1 @@
-[Lab](markdown/lab/001_Setup.md)
+[Lab](markdown/lab/001_Setup)
